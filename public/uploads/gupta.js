@@ -1,0 +1,1 @@
+gupta.js file opened
