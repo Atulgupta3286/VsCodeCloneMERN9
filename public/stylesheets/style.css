@@ -18,22 +18,23 @@ body {
   display: flex;
 }
 
-.left-panel{
+.left-panel {
   height: 100%;
   width: 20%;
   background-color: rgb(169, 166, 166);
 }
-form{
+
+form {
   padding: 10% 10%;
 }
 
-a{
+a {
   font-size: 30px;
   text-decoration: none;
   color: black;
 }
 
-.right-panel{
+.right-panel {
   width: 80%;
   height: 100%;
   background: gray;

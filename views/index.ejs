@@ -17,9 +17,10 @@
           
            <% files.forEach(function(file,index){%>
             <li>
-             <a href="/file/<%= file %>">
-              <%=file%>
-             </a> 
+              <a href="/file/<%= file %>">
+                <%=file%>
+               </a>
+                <a href="/delete/<%= file %>">❌              </a> 
             </li>
           <% })%>
           </li>
