@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="left-panel">
-        <form action="/createfile" method="post">
-          <input type="text" placeholder="Enter file name" name="filename" />
-        </form>
-        <hr>
-        <ul>
-          
-           <% files.forEach(function(file,index){%>
-            <li>
-              <a href="/file/<%= file %>">
-                <%=file%>
-               </a>
-                <a href="/delete/<%= file %>">❌              </a> 
-            </li>
-          <% })%>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <form action="/createfile" method="post">
+        <input type="text" placeholder="Enter file name" name="filename" />
+      </form>
+      <hr>
+      <ul>
+
+        <% files.forEach(function(file,index){%>
+          <li>
+            <a href="/file/<%= file %>">
+              <%=file%>
+            </a>
+            <a href="/delete/<%= file %>">❌ </a>
           </li>
-        </ul>
-      </div>
-      <div class="right-panel">
-        <form action="">
-          <textarea cols="100" rows="20">
-            <%= filedata%>
-          </textarea>
-        </form>
-      </div>
+          <% })%>
+            </li>
+      </ul>
     </div>
-  </body>
+    <div class="right-panel">
+      <form action="/update/<%= filename %>" method="post">
+        <textarea name="filedata" cols="100" rows="20">
+            <%= filedata%></textarea>
+        <br /><br />
+        <button>Save</button>
+      </form>
+    </div>
+  </div>
+</body>
+
 </html>
 
-<!--class-> 11 date-> 13 -->
+<!-- class-> 11 date-> 13 -->
 <!-- class-> 12 date-> 14 -->
 <!-- class-> 13 date-> 15 -->
+<!-- class-> 14 date-> 18 -->
+<!-- class-> 15 date-> 19 -->
+<!-- 5 days for this project -->
